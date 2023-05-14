@@ -12,8 +12,6 @@ public class 문자열 {
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 
-		String result = "";
-
 		int T = Integer.parseInt(br.readLine());
 
 		while (T-- > 0) {
