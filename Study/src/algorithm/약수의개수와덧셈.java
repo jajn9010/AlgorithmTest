@@ -1,6 +1,5 @@
 package algorithm;
 
-import java.util.ArrayList;
 
 public class 약수의개수와덧셈 {
 	public static void main(String[] args) {
@@ -8,7 +7,6 @@ public class 약수의개수와덧셈 {
 		int right = 27;
 		
 		int answer = 0;
-		ArrayList<Integer> a = new ArrayList<>();
 		
 		for(int i = left; i <= right; i++) {
 			int cnt = 0;

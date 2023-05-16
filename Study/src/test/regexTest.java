@@ -1,23 +1,28 @@
 //*
 package test;
 
-import java.util.regex.PatternSyntaxException;
+import java.util.regex.*;
 
 public class regexTest {
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
-//		// 개행 문자가 들어간 비교할 문자열
-//        String txt = "this\nis\ntest\n";
-//
-//        // . 기호는 모든 문자를 포함하지만 개행 문자는 포함하지 않기 때문에 일치하는 검색 결과가 없음
-//        Matcher matcher1 = Pattern.compile("(^.*$)").matcher(txt);
-//        System.out.println(matcher1.find()); // false
-//
-//
-//        // . 기호가 개행 문자까지 포함하도록
-//        Matcher matcher2 = Pattern.compile("(?s)(^.*$)").matcher(txt);
-//        while (matcher2.find()) {
-//            System.out.println(matcher2.group()); // this, is, test
-//        }
+		// 개행 문자가 들어간 비교할 문자열
+       String txt = "this\nis\ntest\n";
+
+       // . 기호는 모든 문자를 포함하지만 개행 문자는 포함하지 않기 때문에 일치하는 검색 결과가 없음
+       Matcher matcher1 = Pattern.compile("(^.*$)").matcher(txt);
+       System.out.println(matcher1.find()); // false
+
+
+       // . 기호가 개행 문자까지 포함하도록
+       Matcher matcher2 = Pattern.compile("(?s)(^.*$)").matcher(txt);
+       while (matcher2.find()) {
+           System.out.println(matcher2.group()); // this, is, test
+       }
+	}
+}
 //
 //
 //        // 다중 행 모드로 각 행마다 정규식 검사
@@ -34,14 +39,14 @@ public class regexTest {
 //            System.out.println(matcher5.group()); // HelloWorld
 //        }
         
-        try {
-            String txt = "power987*-;";
-            String[] splitStr = txt.split("+"); // 오류 문법
-        } catch (PatternSyntaxException e) {
-            e.printStackTrace();
-        }
-	}
-}
+//         try {
+//             String txt = "power987*-;";
+//             String[] splitStr = txt.split("+"); // 오류 문법
+//         } catch (PatternSyntaxException e) {
+//             e.printStackTrace();
+//         }
+// 	}
+// }
 //*/
 
 /*
