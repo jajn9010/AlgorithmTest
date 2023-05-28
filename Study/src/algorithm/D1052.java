@@ -13,36 +13,18 @@ public class D1052 {
 
         int n = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
-
-        calc(n, k);
-
-        sb.reverse();
-        String str = sb.toString();
-        int ans = Integer.valueOf(str, 2);
+        
+        int ans = 0;
+        
+        while(true) {
+        	int cnt = 0;
+        	String bin = Integer.toBinaryString(n + ans);
+        	for (int i = 0; i < bin.length(); i++) {
+				if(bin.charAt(i) == '1') cnt ++;
+			}
+        	if(cnt <= k) break;
+        	ans++;
+        }
         System.out.println(ans);
-    }
-
-    static void calc(int n, int k ) {
-        if(n/2 < Math.pow(2, k) && n%2 == 1) {
-            sb.append(1);
-            return;
-        }else if(n/2 < Math.pow(2, k) && n%2 == 0) {
-            return;
-        }
-
-        if (n/2 == Math.pow(2, k) && n%2 == 0) {
-            sb.append(0);
-            return;
-        } else if (n/2 == Math.pow(2, k) && n%2 == 1) {
-            sb.append(1);
-            return;
-        } else if(n%2 == 0) {
-            sb.append(0);
-            calc(n/2, k);
-        } else {
-            sb.append(1);
-            calc(n/2+1, k);
-        }
-        return;
     }
 }
