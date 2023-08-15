@@ -23,12 +23,12 @@ public class D11001 {
 		
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= N; i++) {
-			T[i] = Long.parseLong(st.nextToken());
+			T[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		st = new StringTokenizer(br.readLine());
 		for (int i = 1; i <= N; i++) {
-			V[i] = Long.parseLong(st.nextToken());
+			V[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		solution(1, N, 1, N);
